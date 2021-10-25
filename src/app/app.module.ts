@@ -14,12 +14,18 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 
 import { RegisterComponent } from './register/register.component';
 import {MatSelectModule} from '@angular/material/select';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { DashboardComponentComponent } from './dashboard-component/dashboard-component.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    AboutComponent,
+    ContactComponent,
+    DashboardComponentComponent
   ],
   imports: [
     BrowserModule,
