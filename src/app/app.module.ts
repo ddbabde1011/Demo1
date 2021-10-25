@@ -12,10 +12,20 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import {MatToolbarModule} from '@angular/material/toolbar';
 
+import { RegisterComponent } from './register/register.component';
+import {MatSelectModule} from '@angular/material/select';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { DashboardComponentComponent } from './dashboard-component/dashboard-component.component';
+
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent,
+    AboutComponent,
+    ContactComponent,
+    DashboardComponentComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +36,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     MatInputModule,
     MatButtonModule,
     MatCardModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
