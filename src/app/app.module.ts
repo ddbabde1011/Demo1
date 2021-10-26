@@ -17,6 +17,8 @@ import {MatSelectModule} from '@angular/material/select';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { DashboardComponentComponent } from './dashboard-component/dashboard-component.component';
+import { HeaderComponent } from './header/header.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { DashboardComponentComponent } from './dashboard-component/dashboard-com
     RegisterComponent,
     AboutComponent,
     ContactComponent,
-    DashboardComponentComponent
+    DashboardComponentComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +40,9 @@ import { DashboardComponentComponent } from './dashboard-component/dashboard-com
     MatButtonModule,
     MatCardModule,
     MatToolbarModule,
-    MatSelectModule
+    MatSelectModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
