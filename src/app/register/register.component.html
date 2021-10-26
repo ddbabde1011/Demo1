@@ -1,37 +1,49 @@
 <div fxLayoutAlign="center center" fxFlexFill class="main-div">
-    <mat-card fxFlex="25">
-      <mat-toolbar color="primary">Sign Up Page</mat-toolbar>
-      <form fxLayoutAlign="stretch" fxLayout="column" class="login-form">
-        <mat-form-field>
-          <mat-label>Name</mat-label>
-          <input matInput placeholder="name">
-        </mat-form-field>
+  <mat-card fxFlex="25">
+    <mat-toolbar color="primary">Sign Up Page</mat-toolbar>
+    <form fxLayoutAlign="stretch" fxLayout="column" class="login-form" (ngSubmit)="onRegister()" name="registerForm" [formGroup]="registerForm">
+      <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="name" formControlName="name">
+        <mat-error *ngIf="!registerForm.controls['name'].valid">
+          Name is required
+      </mat-error>
+      </mat-form-field>
 
-        <mat-form-field>
-            <mat-label>Email</mat-label>
-            <input matInput placeholder="email">
-        </mat-form-field>
+      <mat-form-field>
+          <mat-label>Email</mat-label>
+          <input matInput placeholder="email" formControlName="email" required>
+          <mat-error *ngIf="!registerForm.controls['email'].valid">
+              Email is required
+          </mat-error>
+      </mat-form-field>
 
-        <mat-form-field>
-            <mat-label>Phone Number</mat-label>
-            <input matInput placeholder="phone Number">
-        </mat-form-field>
+      <mat-form-field>
+          <mat-label>Phone Number</mat-label>
+          <input matInput formControlName="phoneNumber" placeholder="phone Number">
+          <mat-error *ngIf="!registerForm.controls['phoneNumber'].valid">
+            Phone Number is required
+        </mat-error>
+      </mat-form-field>
 
-        <mat-form-field appearance="fill">
-          <mat-label>Gender</mat-label>
-          <mat-select ngModel="selectedValue" name="food">
-            <mat-option *ngFor="let food of foods" [value]="food.value">
-              {{food.viewValue}}
-            </mat-option>
-          </mat-select>
-        </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Gender</mat-label>
+        <mat-select formControlName="gender" ngModel="selectedValue" name="gender">
+          <mat-option *ngFor="let gender of genders" [value]="gender.value">
+            {{gender.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
 
-        <mat-form-field>
-          <mat-label>Password</mat-label>
-          <input matInput type="password" placeholder="Password">
-        </mat-form-field>
+      <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input matInput formControlName="password" type="password" placeholder="Password" required>
+        <mat-error *ngIf="!registerForm.controls['password'].valid">
+          Password is required
+        </mat-error>
+      </mat-form-field>
 
-        <button mat-stroked-button color="accent" type="submit">Sign Up</button>
-      </form>
-    </mat-card>
-  </div>
+      <button mat-stroked-button color="accent" type="submit">Sign Up</button>
+    </form>
+  </mat-card>
+</div>

@@ -1,7 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { validateBasis } from '@angular/flex-layout';
+import {FormGroup, FormBuilder, Validators, FormControl} from '@angular/forms';
 
-
-interface Food {
+interface Gender {
   value: string;
   viewValue: string;
 }
@@ -12,23 +13,35 @@ interface Food {
   styleUrls: ['./register.component.css']
 })
 
-
 export class RegisterComponent implements OnInit {
 
-  constructor() { }
+  constructor(private fb:FormBuilder) { }
 
   @Input() selectedValue !: string;
 
-  foods: Food[] = [
+   genders: Gender[] = [
     {value: 'Female', viewValue: 'Female'},
     {value: 'Male', viewValue: 'Male'},
     {value: 'Other', viewValue: 'Other'}
   ];
 
-  ngOnInit(): void {
-
+  ngOnInit() {
   }
 
+  registerForm: FormGroup = this.fb.group({
+    email: ['', [Validators.required, Validators.email]],
+    password: ['', [Validators.required, Validators.minLength(6)]],
+    name:['', Validators.required],
+    phoneNumber:['', Validators.required, Validators.maxLength(10),Validators.minLength(10)],
+    gender:['', Validators.required]
+  })
+
+
+  onRegister() {
+    if (this.registerForm.invalid) {
+      return;
+    }
+    console.log(this.registerForm.value);
+  }
 
 }
-
