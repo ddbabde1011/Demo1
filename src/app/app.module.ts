@@ -17,6 +17,7 @@ import {MatSelectModule} from '@angular/material/select';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { DashboardComponentComponent } from './dashboard-component/dashboard-component.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 
 @NgModule({
@@ -39,7 +40,9 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
     MatButtonModule,
     MatCardModule,
     MatToolbarModule,
-    MatSelectModule
+    MatSelectModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
