@@ -1,6 +1,6 @@
 <div fxLayoutAlign="center center" fxFlexFill class="main-div">
   <mat-card fxFlex="25">
-    <mat-toolbar color="primary"></mat-toolbar>
+    <mat-toolbar color="primary">Login Form</mat-toolbar>
     <form fxLayoutAlign="stretch" fxLayout="column" class="login-form">
       <mat-form-field>
         <mat-label>UserEmail</mat-label>
@@ -12,9 +12,8 @@
         <input matInput type="password" placeholder="Password">
       </mat-form-field>
       <button mat-raised-button type="submit">Login</button>
-      <!-- <br/>
-      <button mat-stroked-button color="accent" type="button" [routerLink]="'register'">Sign Up</button> -->
-      <button mat-raised-button type="submit" (click)="onRegisterClick()">Register</button>
+      <br/>
+      <button mat-stroked-button color="accent" type="submit" (click)="onRegisterClick()">Register</button>
       <a routerLink="/forgot-password" class="forgot-password">Forgot Password?</a>
     </form>
   </mat-card>
