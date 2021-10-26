@@ -12,6 +12,8 @@
         <input matInput type="password" placeholder="Password">
       </mat-form-field>
       <button mat-raised-button type="submit">Login</button>
+      <button mat-raised-button type="submit" (click)="onRegisterClick()">Register</button>
+      <a routerLink="/forgot-password" class="forgot-password">Forgot Password?</a>
     </form>
 
   </mat-card>

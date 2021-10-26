@@ -17,7 +17,7 @@ import {MatSelectModule} from '@angular/material/select';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { DashboardComponentComponent } from './dashboard-component/dashboard-component.component';
-import { HeaderComponent } from './header/header.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
@@ -28,7 +28,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AboutComponent,
     ContactComponent,
     DashboardComponentComponent,
-    HeaderComponent
+    ForgotPasswordComponent
   ],
   imports: [
     BrowserModule,
