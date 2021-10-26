@@ -12,8 +12,10 @@
         <input matInput type="password" placeholder="Password">
       </mat-form-field>
       <button mat-raised-button type="submit">Login</button>
-      <br/>
-      <button mat-stroked-button color="accent" type="button" [routerLink]="'register'">Sign Up</button>
+      <!-- <br/>
+      <button mat-stroked-button color="accent" type="button" [routerLink]="'register'">Sign Up</button> -->
+      <button mat-raised-button type="submit" (click)="onRegisterClick()">Register</button>
+      <a routerLink="/forgot-password" class="forgot-password">Forgot Password?</a>
     </form>
   </mat-card>
 </div>

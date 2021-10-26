@@ -18,6 +18,7 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { DashboardComponentComponent } from './dashboard-component/dashboard-component.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     RegisterComponent,
     AboutComponent,
     ContactComponent,
-    DashboardComponentComponent
+    DashboardComponentComponent,
+    ForgotPasswordComponent
   ],
   imports: [
     BrowserModule,
