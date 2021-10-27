@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,13 +9,18 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  @ViewChild("userEmail") userEmail:any;
-  @ViewChild("password") password:any;
+  @ViewChild("userEmail") userEmail: any;
+  @ViewChild("password") password: any;
 
-  constructor(private route: Router) { }
+  constructor(private route: Router, private fb: FormBuilder) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
+
+  loginForm: FormGroup = this.fb.group({
+    email: ['', [Validators.required, Validators.email]],
+    password: ['', [Validators.required, Validators.minLength(6)]]
+  })
 
   onRegisterClick() {
     this.route.navigate(['/register']);
@@ -23,14 +28,14 @@ export class LoginComponent implements OnInit {
 
   onLoginClick() {
     debugger;
-    if(this.userEmail.nativeElement.value==null || this.userEmail.nativeElement.value ==undefined
-      || this.userEmail.nativeElement.value =='') {
-      alert("Please enter userEmail!");
+    if (this.userEmail.nativeElement.value == null || this.userEmail.nativeElement.value == undefined
+      || this.userEmail.nativeElement.value == '') {
+      // alert("Please enter userEmail!");
       return;
     }
-    if(this.password.nativeElement.value==null || this.password.nativeElement.value ==undefined
-      || this.password.nativeElement.value =='') {
-      alert("Please enter password!");
+    if (this.password.nativeElement.value == null || this.password.nativeElement.value == undefined
+      || this.password.nativeElement.value == '') {
+      // alert("Please enter password!");
       return;
     }
     this.route.navigate(['/dashboard-component']);
