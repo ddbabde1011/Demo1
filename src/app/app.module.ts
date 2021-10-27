@@ -17,8 +17,12 @@ import {MatSelectModule} from '@angular/material/select';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { DashboardComponentComponent } from './dashboard-component/dashboard-component.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NewOrderComponent } from './new-order/new-order.component';
+
+
 
 @NgModule({
   declarations: [
@@ -28,7 +32,8 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
     AboutComponent,
     ContactComponent,
     DashboardComponentComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
+    NewOrderComponent
   ],
   imports: [
     BrowserModule,
