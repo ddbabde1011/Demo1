@@ -1,0 +1,35 @@
+<div fxLayoutAlign="center center" fxFlexFill class="main-div">
+    <mat-card fxFlex="25">
+      <mat-toolbar color="primary">ADD YOUR ORDER HERE!!</mat-toolbar>
+      <form fxLayoutAlign="stretch" fxLayout="column" class="login-form" (ngSubmit)="onAddProduct()" name="loginForm" [formGroup]="addproductForm">
+        <mat-form-field>
+          <mat-label>UserEmail</mat-label>
+          <input matInput type="text" formControlName="UserEmail" placeholder="UserEmail">
+          <mat-error *ngIf="!addproductForm.controls['UserEmail'].valid">
+            UserEmail is required
+        </mat-error>
+        </mat-form-field>
+  
+        <mat-form-field>
+          <mat-label>Phone</mat-label>
+          <input matInput type="text" formControlName="Phone" placeholder="Phone">
+          <mat-error *ngIf="!addproductForm.controls['Phone'].valid">
+            Phone is required
+        </mat-error>
+        </mat-form-field>
+
+     
+        <mat-form-field appearance="fill">
+          <mat-label>Product</mat-label>
+          <mat-select formControlName="Product">
+            <mat-option *ngFor="let food of products" [value]="food.value">
+              {{food.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        
+        <button mat-raised-button type="submit">Submit</button>
+      </form>
+  
+    

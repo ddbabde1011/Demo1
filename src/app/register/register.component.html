@@ -1,28 +1,29 @@
 <div fxLayoutAlign="center center" fxFlexFill class="main-div">
   <mat-card fxFlex="25">
     <mat-toolbar color="primary">Sign Up Page</mat-toolbar>
-    <form fxLayoutAlign="stretch" fxLayout="column" class="login-form" (ngSubmit)="onRegister()" name="registerForm" [formGroup]="registerForm">
+    <form fxLayoutAlign="stretch" fxLayout="column" class="login-form" (ngSubmit)="onRegister()" name="registerForm"
+      [formGroup]="registerForm">
       <mat-form-field>
         <mat-label>Name</mat-label>
         <input matInput placeholder="name" formControlName="name">
         <mat-error *ngIf="!registerForm.controls['name'].valid">
           Name is required
-      </mat-error>
+        </mat-error>
       </mat-form-field>
 
       <mat-form-field>
-          <mat-label>Email</mat-label>
-          <input matInput placeholder="email" formControlName="email" required>
-          <mat-error *ngIf="!registerForm.controls['email'].valid">
-              Email is required
-          </mat-error>
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="email" formControlName="email" required>
+        <mat-error *ngIf="!registerForm.controls['email'].valid">
+          Email is required
+        </mat-error>
       </mat-form-field>
 
       <mat-form-field>
-          <mat-label>Phone Number</mat-label>
-          <input matInput formControlName="phoneNumber" placeholder="phone Number">
-          <mat-error *ngIf="!registerForm.controls['phoneNumber'].valid">
-            Phone Number is required
+        <mat-label>Phone Number</mat-label>
+        <input matInput formControlName="phoneNumber" placeholder="phone Number">
+        <mat-error *ngIf="!registerForm.controls['phoneNumber'].valid">
+          Phone Number is required
         </mat-error>
       </mat-form-field>
 
