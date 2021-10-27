@@ -1,20 +1,31 @@
 <div fxLayoutAlign="center center" fxFlexFill class="main-div">
   <mat-card fxFlex="25">
     <mat-toolbar color="primary"></mat-toolbar>
-    <form fxLayoutAlign="stretch" fxLayout="column" class="login-form">
+    <form fxLayoutAlign="stretch" fxLayout="column" class="login-form" (ngSubmit)="onLoginClick()" name="loginForm"
+      [formGroup]="loginForm">
       <mat-form-field>
         <mat-label>UserEmail</mat-label>
-        <input #userEmail matInput placeholder="UserEmail" ng required="true" />
+        <input #userEmail matInput type="email" placeholder="UserEmail" formControlName="email" required />
+        <mat-error *ngIf="!loginForm.controls['email'].valid">
+          Please enter UserEmail in format "abc@xyz.com"
+        </mat-error>
       </mat-form-field>
+
+
 
       <mat-form-field>
         <mat-label>Password</mat-label>
-        <input #password matInput placeholder="Password" ng required="true" />
+        <input #password matInput type="password" placeholder="Password" formControlName="password" required />
+        <mat-error *ngIf="!loginForm.controls['password'].valid">
+          Password must contain at least 6 characters
+        </mat-error>
       </mat-form-field>
 
-      <button mat-raised-button type="submit"  (click)="onLoginClick()">Login</button>
+
+      <button mat-raised-button type="submit" (click)="onLoginClick()">Login</button>
       <button mat-raised-button type="submit" (click)="onRegisterClick()">Register</button>
       <a routerLink="/forgot-password" class="forgot-password">Forgot Password?</a>
     </form>
+
   </mat-card>
 </div>
