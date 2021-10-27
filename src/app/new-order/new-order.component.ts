@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  selector: 'app-new-order',
+  templateUrl: './new-order.component.html',
+  styleUrls: ['./new-order.component.css']
 })
-export class HeaderComponent implements OnInit {
+export class NewOrderComponent implements OnInit {
+
   products = [
     {value: 'steak-0', viewValue: 'JAVA'},
     {value: 'pizza-1', viewValue: 'ANGULAR'},
@@ -14,7 +15,7 @@ export class HeaderComponent implements OnInit {
   ];
 
   constructor(private fb:FormBuilder) { }
-
+   
   addproductForm: FormGroup = this.fb.group({
     UserEmail: ['', [Validators.required, Validators.email]],
     Phone: ['', [Validators.required, Validators.minLength(6)]],
@@ -33,3 +34,5 @@ export class HeaderComponent implements OnInit {
   }
 
 }
+
+

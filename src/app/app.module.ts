@@ -20,7 +20,8 @@ import { DashboardComponentComponent } from './dashboard-component/dashboard-com
 
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HeaderComponent } from './header/header.component';
+import { NewOrderComponent } from './new-order/new-order.component';
+
 
 
 @NgModule({
@@ -32,7 +33,7 @@ import { HeaderComponent } from './header/header.component';
     ContactComponent,
     DashboardComponentComponent,
     ForgotPasswordComponent,
-    HeaderComponent
+    NewOrderComponent
   ],
   imports: [
     BrowserModule,
