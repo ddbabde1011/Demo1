@@ -4,16 +4,15 @@
     <form fxLayoutAlign="stretch" fxLayout="column" class="login-form">
       <mat-form-field>
         <mat-label>UserEmail</mat-label>
-        <input matInput placeholder="UserEmail">
+        <input #userEmail matInput placeholder="UserEmail" ng required="true" />
       </mat-form-field>
 
       <mat-form-field>
         <mat-label>Password</mat-label>
-        <input matInput type="password" placeholder="Password">
+        <input #password matInput placeholder="Password" ng required="true" />
       </mat-form-field>
-      <button mat-raised-button type="submit">Login</button>
-      <!-- <br/>
-      <button mat-stroked-button color="accent" type="button" [routerLink]="'register'">Sign Up</button> -->
+
+      <button mat-raised-button type="submit"  (click)="onLoginClick()">Login</button>
       <button mat-raised-button type="submit" (click)="onRegisterClick()">Register</button>
       <a routerLink="/forgot-password" class="forgot-password">Forgot Password?</a>
     </form>

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,13 +9,31 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private route:Router) { }
+  @ViewChild("userEmail") userEmail:any;
+  @ViewChild("password") password:any;
+
+  constructor(private route: Router) { }
 
   ngOnInit(): void {
   }
 
   onRegisterClick() {
     this.route.navigate(['/register']);
+  }
+
+  onLoginClick() {
+    debugger;
+    if(this.userEmail.nativeElement.value==null || this.userEmail.nativeElement.value ==undefined
+      || this.userEmail.nativeElement.value =='') {
+      alert("Please enter userEmail!");
+      return;
+    }
+    if(this.password.nativeElement.value==null || this.password.nativeElement.value ==undefined
+      || this.password.nativeElement.value =='') {
+      alert("Please enter password!");
+      return;
+    }
+    this.route.navigate(['/dashboard-component']);
   }
 
 }
