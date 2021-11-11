@@ -1,9 +1,15 @@
-<p>
-Welcome to the site! Hope you like it!
-</p>
+<app-header></app-header>
+<div class="containerbody">
+    <p>Welcome to the site! Hope you like it!
+    </p>
+    <p>
+    <button mat-button color = "accent" routerLink="/">Create New Order</button>
+    </p>
+    <form fxLayoutAlign="stretch" fxLayout="column">
+        <a  mat-stroked-button class="colorbg"  routerLink="/manage-users" type="submit">Manage Users</a>
+    </form>
+</div>
 
-<p>
-<button mat-button color = "accent" routerLink="/">Create New Order</button>
-</p>
+<app-footer></app-footer>
 
 

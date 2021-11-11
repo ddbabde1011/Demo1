@@ -21,6 +21,17 @@ import { DashboardComponentComponent } from './dashboard-component/dashboard-com
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NewOrderComponent } from './new-order/new-order.component';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
+import {MatTableModule} from '@angular/material/table';
+import { ManageusersComponent } from './manageusers/manageusers.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { MatNativeDateModule } from '@angular/material/core';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
+import {MatIconModule} from '@angular/material/icon';
 
 
 
@@ -33,7 +44,10 @@ import { NewOrderComponent } from './new-order/new-order.component';
     ContactComponent,
     DashboardComponentComponent,
     ForgotPasswordComponent,
-    NewOrderComponent
+    NewOrderComponent,
+    ManageusersComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +61,15 @@ import { NewOrderComponent } from './new-order/new-order.component';
     MatToolbarModule,
     MatSelectModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    RouterModule,
+    MatTableModule,
+    NgbModule,
+    MatNativeDateModule,
+    MatSidenavModule,
+    MatListModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -9,6 +9,7 @@ import { AboutComponent } from './about/about.component';
 import { DashboardComponentComponent } from './dashboard-component/dashboard-component.component'
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { NewOrderComponent } from './new-order/new-order.component';
+import { ManageusersComponent } from './manageusers/manageusers.component';
 
 const routes: Routes = [
       { path:'', component:LoginComponent },
@@ -17,7 +18,8 @@ const routes: Routes = [
       { path: 'about', component:AboutComponent},
       { path: 'dashboard-component', component:DashboardComponentComponent},
       { path: 'forgot-password',component:ForgotPasswordComponent},
-      { path: 'new-order',component:NewOrderComponent}
+      { path: 'new-order',component:NewOrderComponent},
+      {path: 'manage-users', component:ManageusersComponent}
 ];
 
 @NgModule({
