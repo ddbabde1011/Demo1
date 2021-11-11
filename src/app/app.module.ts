@@ -21,6 +21,8 @@ import { DashboardComponentComponent } from './dashboard-component/dashboard-com
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NewOrderComponent } from './new-order/new-order.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -33,7 +35,9 @@ import { NewOrderComponent } from './new-order/new-order.component';
     ContactComponent,
     DashboardComponentComponent,
     ForgotPasswordComponent,
-    NewOrderComponent
+    NewOrderComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

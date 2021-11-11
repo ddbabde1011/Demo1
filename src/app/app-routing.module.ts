@@ -11,7 +11,8 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
 import { NewOrderComponent } from './new-order/new-order.component';
 
 const routes: Routes = [
-      { path:'', component:LoginComponent },
+      { path:'Login', component:LoginComponent },
+      { path:'', component:AppComponent },
       { path:'register', component:RegisterComponent },
       { path: 'contact', component:ContactComponent},
       { path: 'about', component:AboutComponent},
