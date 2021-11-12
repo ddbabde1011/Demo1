@@ -32,6 +32,8 @@ import { MatNativeDateModule } from '@angular/material/core';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatIconModule} from '@angular/material/icon';
+import { TabViewComponent } from './tab-view/tab-view.component';
+import {MatTabsModule} from '@angular/material/tabs';
 
 
 
@@ -47,7 +49,8 @@ import {MatIconModule} from '@angular/material/icon';
     NewOrderComponent,
     ManageusersComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    TabViewComponent
   ],
   imports: [
     BrowserModule,
@@ -70,6 +73,7 @@ import {MatIconModule} from '@angular/material/icon';
     MatSidenavModule,
     MatListModule,
     MatIconModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

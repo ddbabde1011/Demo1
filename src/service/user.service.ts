@@ -4,6 +4,7 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
+
 export class UserService {
 
   registerUrl = 'http://localhost:8081/user/addnew';

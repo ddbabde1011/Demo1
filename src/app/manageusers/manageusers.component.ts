@@ -30,7 +30,7 @@ export class ManageusersComponent implements OnInit {
 
   getUsers(){
     this.userService.getUsers().subscribe(
-      (response) => {
+      (response: Register[]) => {
         console.log(response);
         this.users = response;
       }

@@ -1,15 +1,18 @@
-<app-header></app-header>
-<div class="containerbody">
-    <p>Welcome to the site! Hope you like it!
-    </p>
-    <p>
-    <button mat-button color = "accent" routerLink="/">Create New Order</button>
-    </p>
-    <form fxLayoutAlign="stretch" fxLayout="column">
-        <a  mat-stroked-button class="colorbg"  routerLink="/manage-users" type="submit">Manage Users</a>
-    </form>
-</div>
 
+    <mat-drawer-container class="example-container">
+        <mat-drawer mode="side" opened  class="sidenav">
+            <mat-list role="list">
+                <mat-list-item role="listitem" [routerLink]="['/dashboard-component/register']">Register</mat-list-item>
+                <mat-list-item role="listitem" [routerLink]="['/dashboard-component/manage-users']" >List</mat-list-item>
+                <mat-list-item role="listitem" [routerLink]="['/dashboard-component/new-order']" >New Order</mat-list-item>
+              </mat-list>
+        </mat-drawer>
+        <mat-drawer-content opened style="border-left: 6.5px solid black; height: 100%;">
+            <app-header></app-header>
+            <p style="text-align: center;">
+                Welcome to the site! Hope you like it!
+            </p>
+            <router-outlet></router-outlet>
+        </mat-drawer-content>
+      </mat-drawer-container> 
 <app-footer></app-footer>
-
-
