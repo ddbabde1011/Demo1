@@ -13,3 +13,8 @@
   .mat-radio-button ~ .mat-radio-button {
     margin-left: 16px;
   }
+
+  .colorbg {
+    background-color:blue;
+    color: white;
+  }

@@ -1,6 +1,21 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { validateBasis } from '@angular/flex-layout';
 import {FormGroup, FormBuilder, Validators, FormControl} from '@angular/forms';
+import { Router } from '@angular/router';
+import { UserService } from 'src/service/user.service';
+
+export class Register {
+  constructor(
+    public id: number,
+    public firstname: string,
+    public lastname: string,
+    public phonenumber: string,
+    public email: string,
+    public password: string,
+    public gender: string
+  ) {
+  }
+}
 
 interface Gender {
   value: string;
@@ -15,7 +30,9 @@ interface Gender {
 
 export class RegisterComponent implements OnInit {
 
-  constructor(private fb:FormBuilder) { }
+  constructor(private fb:FormBuilder,
+              private router : Router,
+              private userService: UserService) { }
 
   @Input() selectedValue !: string;
 
@@ -41,7 +58,21 @@ export class RegisterComponent implements OnInit {
     if (this.registerForm.invalid) {
       return;
     }
+    this.userService.onRegister(this.registerForm.value)
+      .subscribe((result) => {
+        this.ngOnInit(); //reload the table
+      });
     console.log(this.registerForm.value);
+    this.router.navigate(['./dashboard-component'])
   }
+
+  // getUsers(){
+  //   this.userService.getUsers().subscribe(
+  //     (response: Register[]) => {
+  //       console.log(response);
+  //       this.users = response;
+  //     }
+  //   );
+  // }
 
 }
